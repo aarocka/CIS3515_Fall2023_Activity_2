@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+
         /* Step 2: Create adapter to display items from array in Spinner */
         //spinner.adapter = ArrayAdapter...
         spinner.adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, numberArray.toList())
