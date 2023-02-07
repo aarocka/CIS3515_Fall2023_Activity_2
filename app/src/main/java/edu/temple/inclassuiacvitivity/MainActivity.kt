@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         //val numberArray = Array Of Numbers
         val numberArray = IntArray(100)
         for (i in 0..99){
-            numberArray[i]= Random.nextInt(0,100)
+            numberArray[i]=i
         }
 
         for (i in numberArray){
@@ -38,8 +38,13 @@ class MainActivity : AppCompatActivity() {
         //spinner.onItemSelectedListener = object: ...
         spinner.onItemSelectedListener = object: OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                /*
                 if (p0 != null) {
-                    displayTextView.text=p0.selectedItem.toString()
+                    displayTextView.textSize = p0!!.getItemAtPosition(p2).toString().toFloat()
+                }
+                */
+                p0?.run {
+                    displayTextView.textSize = getItemAtPosition(p2).toString().toFloat()
                 }
             }
 
