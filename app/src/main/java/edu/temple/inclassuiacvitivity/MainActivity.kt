@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         /* Step 1: Populate this array */
         //val numberArray = Array Of Numbers
         val numberArray = IntArray(100)
-        for (i in 0..99){
+        for (i in 1..100){
             numberArray[i]=i
         }
 
